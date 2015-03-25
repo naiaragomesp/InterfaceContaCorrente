@@ -13,19 +13,19 @@ public class Testador {
 		ContaCorrente cc2 = new ContaCorrente(2346, cor2);
 
 		for (int i = 1; i > 0; i++) {
-			int resposta = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite a opção desejada : \n 1 - Depositar \n 2 - Sacar \n 3 - Transferir \n 4 - Sair"));
+			int resposta = Integer.parseInt(JOptionPane.showInputDialog(null,"Digite a opÃ§Ã£o desejada : \n 1 - Depositar \n 2 - Sacar \n 3 - Transferir \n 4 - Sair"));
 
 			if (resposta == 1) {
 				int resp = Integer.parseInt(JOptionPane.showInputDialog(null,
 						"Digite a quantia desejada : "));
 				cc1.depositar(resp);
-				JOptionPane.showMessageDialog(null, "O seu saldo agora é: " + cc1.getSaldo());
+				JOptionPane.showMessageDialog(null, "O seu saldo agora Ã©: " + cc1.getSaldo());
 
 			} else if (resposta == 2) {
 				int resp = Integer.parseInt(JOptionPane.showInputDialog(null,
 						"Digite a quantia desejada : "));
 				cc1.sacar(resp);
-				JOptionPane.showMessageDialog(null, "O seu saldo agora é: "
+				JOptionPane.showMessageDialog(null, "O seu saldo agora Ã©: "
 						+ cc1.getSaldo());
 
 			} else if (resposta == 3) {
@@ -34,7 +34,8 @@ public class Testador {
 				if (contaDestino == 2) {
 					int resp = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a quantia desejada : "));
 					cc1.transferir(cc2, resp);
-					JOptionPane.showMessageDialog(null, "O seu saldo agora é: " + cc1.getSaldo());					
+					JOptionPane.showMessageDialog(null, "O seu saldo agora Ã©: " + cc1.getSaldo());	
+					JOptionPane.showMessageDialog(null, "O saldo da conta destino Ã©: " + cc2.getSaldo());	
 				}
 				
 			} else if (resposta == 4) {
@@ -42,15 +43,6 @@ public class Testador {
 			}
 		}
 
-		/*
-		 * System.out.println(cc1.getSaldo());
-		 * 
-		 * cc1.transferir(cc2,510);
-		 * 
-		 * System.out.println(cc1.getCorrentista().getNome());
-		 * System.out.println(cc1.getSaldo());
-		 * System.out.println(cc2.getCorrentista().getNome());
-		 * System.out.println(cc2.getSaldo());
-		 */
+	
 	}
 }
